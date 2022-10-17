@@ -53,3 +53,39 @@ nav ul li {
   border: none;
   border-radius: 5px;
  }
+ li {
+  cursor: pointer;
+ }
+ li:hover {
+    text-decoration: line-through;
+    opacity: .4;
+ }
+ form {
+  padding: 20px;
+ }
+
+ input[type = "text"] {
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: #e5e1f3f2 groove 2px;
+  padding: 10px;
+  cursor: pointer;
+ }
+
+ input[type = "submit"] {
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+ }
+
+ input:focus {
+  background: none;
+  border: none;
+ }
