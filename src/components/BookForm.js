@@ -17,9 +17,12 @@ const BookForm = () => {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <input style={{background: theme.color}} type="text" name="title" placeholder='Book Title' value={title} onChange={(e) => {setTitle(e.target.value)}} />
-            <input style={{background: theme.color}} type="text" name="author" placeholder='Book Author' value={author} onChange={(e) => {setAuthor(e.target.value)}} />
-            <input type="submit" value="Add Book" />
+            <input type="text" name="title" placeholder='Book Title' value={title} onChange={(e) => {setTitle(e.target.value)}} />
+            <input type="text" name="author" placeholder='Book Author' value={author} onChange={(e) => {setAuthor(e.target.value)}} />
+            <input style={{
+                color : theme.font,
+                background : theme.background,
+                borderRadius: theme.border_radius}} type="submit" value="Add Book" />
         </form>
     );
 }
