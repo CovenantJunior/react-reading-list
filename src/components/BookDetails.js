@@ -9,7 +9,7 @@ const BookDetails = ({ book, id }) => {
     return ( 
         <li style={{background: theme.bg}} onClick={() => removeBook(book.id)}>
             <div className="name">{ book.title }</div>
-            <div className="name">{ book.author }</div>
+            <div className="name" ><b>{ book.author }</b></div>
         </li>
     );
 }

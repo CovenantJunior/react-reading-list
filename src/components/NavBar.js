@@ -14,7 +14,7 @@ const NavBar = () => {
             background : theme.background,
             borderRadius: theme.border_radius
         }}>
-            <h1>Tea's Reading List</h1>
+            <h1><b>Tea's Reading List</b></h1>
             <p>You currently have { books.length } book(s) to go through...</p>
             {/*<button 
                 style={{
@@ -23,11 +23,11 @@ const NavBar = () => {
                     borderRadius: theme.border_radius
                 }} onClick={toggleAuth}>{ isAuth ? 'Logged in' : 'Logged Out' }
             </button>*/}
-            <ul>
+            {/*<ul>
                 <li style={{color: theme.color}}>Home</li>
                 <li style={{color: theme.color}}>About</li>
                 <li style={{color: theme.color}}>Contact</li>
-            </ul>
+            </ul>*/}
         </nav>
      );
 }

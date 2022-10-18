@@ -26,7 +26,7 @@ code {
   text-align: center;
 }
 nav{
-  padding: 5px;
+  padding: 10px 50px;
 }
 nav ul {
   padding: 0;
@@ -66,8 +66,7 @@ nav ul li {
 
  input[type = "text"] {
   width: 100%;
-  border-radius: 5px;
-  margin: 10px;
+  margin: 10px auto;
   box-sizing: border-box;
   border: none;
   border-bottom: #e5e1f3f2 groove 2px;
@@ -75,10 +74,18 @@ nav ul li {
   cursor: pointer;
  }
 
+ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:active, input:-webkit-autofill:focus {
+  background-color: #FFFFFF !important;
+  color: #555 !important;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #555555 !important;
+  border: none;
+}
+
  input[type = "submit"] {
   width: 100%;
   border-radius: 5px;
-  margin: 10px;
+  margin: 10px auto;
   box-sizing: border-box;
   border: none;
   padding: 10px;

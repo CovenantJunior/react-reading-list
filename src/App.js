@@ -19,9 +19,9 @@ function App() {
               <NavBar />
               <br />
               <BookList />
+              <ThemeToggle />
               <BookForm />
             </BookContextProvider>
-            <ThemeToggle />
           </ThemeContextProvider>
         </AuthContextProvider>
       </div>
