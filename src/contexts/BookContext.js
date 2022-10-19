@@ -1,14 +1,18 @@
 import React, { createContext, useState} from 'react';
+import { useReducer } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { bookReducer } from '../reducers/bookReducer';
 
 export const BookContext = createContext();
 
 const BookContextProvider = (props) => {
-    const [books, setBooks] = useState([
-        {id: 1, title: 'Things Fall Apart', author: "Chinua Achebe"},
-        {id: 2, title: 'Who The Cap Fits', author: "Bob Marley"},
-        {id: 3, title: 'The Bartender', author: "T-Pain"},
-        {id: 4, title: 'Sparing The Rod', author: "Unknown"}
+
+    //Using Context
+    /*const [books, setBooks] = useState([
+        {id: uuidv4(), title: 'Things Fall Apart', author: "Chinua Achebe"},
+        {id: uuidv4(), title: 'Who The Cap Fits', author: "Bob Marley"},
+        {id: uuidv4(), title: 'The Bartender', author: "T-Pain"},
+        {id: uuidv4(), title: 'Sparing The Rod', author: "Unknown"}
     ]);
     
     const addBook = (title, author) => {
@@ -21,6 +25,20 @@ const BookContextProvider = (props) => {
     
     return (
         <BookContext.Provider value={{books, addBook, removeBook}}>
+            {props.children}
+        </BookContext.Provider>
+    );*/
+
+    //Using Reducer
+    const [books, dispatch] = useReducer(bookReducer, [
+        {id: uuidv4(), title: 'Things Fall Apart', author: "Chinua Achebe"},
+        {id: uuidv4(), title: 'Who The Cap Fits', author: "Bob Marley"},
+        {id: uuidv4(), title: 'The Bartender', author: "T-Pain"},
+        {id: uuidv4(), title: 'Sparing The Rod', author: "Unknown"}
+    ]);
+
+    return (
+        <BookContext.Provider value={{books, dispatch}}>
             {props.children}
         </BookContext.Provider>
     );
