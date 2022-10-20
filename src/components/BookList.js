@@ -13,6 +13,7 @@ const BookList = () => {
             background : theme.background,
             borderRadius: theme.border_radius
         }}>
+            <p>Click to Remove</p>
             <ul>
             {books.map(book => {
                    return(
