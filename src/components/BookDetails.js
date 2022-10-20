@@ -19,6 +19,7 @@ const BookDetails = ({ book }) => {
     const { dispatch } = useContext(BookContext);
     const { isLightTheme, light, dark} = useContext(ThemeContext);
     const theme = isLightTheme ? light : dark;
+    
     return ( 
         <li style={{background: theme.bg}} onClick={() => dispatch({type: 'REMOVE_BOOK', id: book.id})}>
             <div className="name">{ book.title }</div>
