@@ -7,7 +7,7 @@ export const BookContext = createContext();
 
 const BookContextProvider = (props) => {
 
-    //Using Context
+    //Using State
     /*const [books, setBooks] = useState([
         {id: uuidv4(), title: 'Things Fall Apart', author: "Chinua Achebe"},
         {id: uuidv4(), title: 'Who The Cap Fits', author: "Bob Marley"},

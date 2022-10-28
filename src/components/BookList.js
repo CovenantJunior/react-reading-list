@@ -28,7 +28,7 @@ const BookList = () => {
             background : theme.background,
             borderRadius: theme.border_radius
         }}>
-            No book availale to read right now... Free time!!
+            No book availale to read right now <br /> Free time!!
         </div>
      );
 }
